@@ -1,0 +1,12 @@
+{
+  "basicHolidays": {
+    "id": 1111,
+    "type": "type",
+    "description": "desc",
+    "day": 20
+  },
+  "ageBasedHolidays": null,
+  "userDisabilityHolidays": null,
+  "childrenHolidays": null,
+  "childDisabilityHolidays": null
+}

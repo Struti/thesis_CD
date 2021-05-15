@@ -1,0 +1,35 @@
+{
+  "basicHolidays": {
+    "id": 1111,
+    "type": "type",
+    "description": "desc",
+    "day": 20
+  },
+  "ageBasedHolidays": {
+    "id": 1111,
+    "type": "type",
+    "description": "desc",
+    "age": 30,
+    "day": 20
+  },
+  "userDisabilityHolidays": {
+    "id": 1111,
+    "type": "type",
+    "description": "desc",
+    "day": 20
+  },
+  "childrenHolidays": {
+    "id": 1111,
+    "type": "type",
+    "description": "desc",
+    "children": 2,
+    "day": 20
+  },
+  "childDisabilityHolidays": {
+    "id": 1111,
+    "type": "type",
+    "description": "desc",
+    "childrenNumber": 2,
+    "day": 20
+  }
+}

@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  holidayRegistryDB:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3308:3306"

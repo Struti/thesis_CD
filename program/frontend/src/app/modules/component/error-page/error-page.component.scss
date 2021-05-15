@@ -1,0 +1,39 @@
+.travolta {
+	background: url(https://media.tenor.com/images/f91abb0cecd265eb4274dabb82bef578/tenor.gif);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	font-family: "Titillium Web", sans-serif;
+	// background-color:#1BCF00;
+	width: 100%;
+}
+
+.container {
+	width: 100%;
+	height: 91vh;
+}
+
+.title {
+	font-size: 5vw;
+	margin-top: 25%;
+}
+
+.sub-title {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+	font-size: 4vw;
+	color: rgb(0, 0, 0);
+}
+
+a {
+	border-radius: 25px;
+	background: none;
+	color: rgb(0, 0, 0);
+	font-size: 18px;
+	padding: 10px 20px;
+	border: 2px solid #fff;
+	text-decoration: none;
+	&:hover {
+		background: #fff;
+		color: #212121;
+	}
+}

@@ -1,0 +1,71 @@
+# You can override the included template(s) by including variable overrides
+# See https://docs.gitlab.com/ee/user/application_security/sast/#customizing-the-sast-settings
+# Note that environment variables can be set in several places
+# See https://docs.gitlab.com/ee/ci/variables/#priority-of-environment-variables
+stages:
+- quality
+- build
+- test
+- coverage
+- visualize
+build:
+  stage: build
+  image: maven:3.6.3-jdk-11
+  script:
+  - mvn $MAVEN_CLI_OPTS compile
+test:
+  stage: test
+  image: maven:3.6.3-jdk-11
+  needs:
+  - build
+  script:
+  - mvn $MAVEN_CLI_OPTS clean org.jacoco:jacoco-maven-plugin:prepare-agent test org.jacoco:jacoco-maven-plugin:report-aggregate
+  - cat modules/testing/target/site/jacoco-aggregate/index.html
+  - cat modules/testing/target/site/jacoco-aggregate/jacoco.xml
+  after_script:
+  - cat jacoco/target/site/jacoco-aggregate/index.html | grep -o '<tfoot>.*</tfoot>'
+  artifacts:
+    when: always
+    reports:
+      junit:
+      - modules/controller/target/surefire-reports/TEST-*.xml
+      - modules/controller/target/failsafe-reports/TEST-*.xml
+      - modules/dal/target/surefire-reports/TEST-*.xml
+      - modules/dal/target/failsafe-reports/TEST-*.xml
+      - modules/domain/target/surefire-reports/TEST-*.xml
+      - modules/domain/target/failsafe-reports/TEST-*.xml
+      - modules/dto/target/surefire-reports/TEST-*.xml
+      - modules/dto/target/failsafe-reports/TEST-*.xml
+      - modules/service/target/surefire-reports/TEST-*.xml
+      - modules/service/target/failsafe-reports/TEST-*.xml
+    expose_as: code coverage
+    paths:
+    - modules/testing/target/site/jacoco-aggregate/index.html
+    - modules/testing/target/site/jacoco-aggregate/jacoco.xml
+coverage_check:
+  image: alpine:latest
+  stage: coverage
+  needs:
+  - test
+  dependencies:
+  - test
+  script:
+  - apk add bash
+  - apk add jq
+  - apk add curl
+  - bash code-coverage.sh
+visualize:
+  stage: visualize
+  image: haynes/jacoco2cobertura:latest
+  script:
+  - python /opt/cover2cover.py modules/testing/target/site/jacoco-aggregate/jacoco.xml
+    modules/controller/src/main/java modules/dal/src/main/java modules/service/src/main/java
+    modules/domain/src/main/java modules/dto/src/main/java > modules/testing/target/site/jacoco-aggregate/cobertura.xml
+  - python /opt/source2filename.py modules/testing/target/site/jacoco-aggregate/cobertura.xml
+  needs:
+  - test
+  dependencies:
+  - test
+  artifacts:
+    reports:
+      cobertura: modules/testing/target/site/jacoco-aggregate/cobertura.xml

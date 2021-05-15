@@ -1,0 +1,47 @@
+[
+  {
+    "year": 2020,
+    "fixHolidaysForTheYear": 10,
+    "eventRelatedHolidays": [
+      {
+        "holidayType": "dad",
+        "days": 0,
+        "eventDate": "2021-03-30",
+        "expiration": null
+      },
+      {
+        "holidayType": "dad",
+        "days": 0,
+        "eventDate": "2021-03-30",
+        "expiration": "2021-04-10"
+      }
+    ],
+    "holidayEvent": [
+      {
+        "description": "desc",
+        "startDate": "2020-03-04",
+        "endDate": "2020-05-20",
+        "dadHoliday": null
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "fixHolidaysForTheYear": 10,
+    "eventRelatedHolidays": [
+      {
+        "holidayType": "dad",
+        "days": 0,
+        "eventDate": "2021-03-30",
+        "expiration": null
+      },
+      {
+        "holidayType": "dad",
+        "days": 0,
+        "eventDate": "2021-03-30",
+        "expiration": "2021-04-10"
+      }
+    ],
+    "holidayEvent": null
+  }
+]

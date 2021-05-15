@@ -1,0 +1,17 @@
+{
+    "HEADER": {
+        "MAIN_PAGE": "Main Page",
+        "USERS": "Users",
+        "HOLIDAYS": "Holidays",
+        "HOLIDAYS_PLAN": "Holidays plan",
+        "LOGOUT": "Logout"
+    },
+    "WELCOME": {
+        "TITTLE": "Welcome to the home page.",
+        "SUBTITTLE": "Thesis by Alex Strutinszky"
+    },
+    "ERROR": {
+        "TITLE" : "It seems you got lost...",
+        "BUTTON" : "Go back"
+    }
+}

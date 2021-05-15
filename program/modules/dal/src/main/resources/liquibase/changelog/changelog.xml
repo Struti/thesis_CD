@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+  <changeSet id="1" dbms="mysql" author="Struti">
+    <sqlFile path="/liquibase/scripts/1_create_user_table_ch42.sql"/>
+  </changeSet>
+
+  <changeSet id="2" dbms="mysql" author="Struti">
+    <sqlFile path="/liquibase/scripts/2_create_child_table_ch62.sql"/>
+  </changeSet>
+
+  <changeSet id="3" dbms="mysql" author="Struti">
+    <sqlFile path="/liquibase/scripts/3_create_holiday_calculation_plan_table_ch105.sql"/>
+  </changeSet>
+
+  <changeSet id="4" dbms="mysql" author="Struti">
+    <sqlFile path="/liquibase/scripts/4_create_holiday_history_table_ch106.sql"/>
+  </changeSet>
+
+  <changeSet id="5" dbms="mysql" author="Struti">
+    <sqlFile path="/liquibase/scripts/5_create_person_table_ch61.sql"/>
+  </changeSet>
+
+  <changeSet id="6" dbms="mysql" author="Struti">
+    <sqlFile path="/liquibase/scripts/6_alter_user_table_ch41.sql"/>
+  </changeSet>
+
+  <changeSet id="7" dbms="mysql" author="Struti">
+    <sqlFile path="/liquibase/scripts/7_create_basic_holiday_table_ch132.sql"/>
+  </changeSet>
+
+  <changeSet id="8" dbms="mysql" author="Struti">
+    <sqlFile path="/liquibase/scripts/8_create_holiday_because_death_table_ch133.sql"/>
+  </changeSet>
+
+  <changeSet id="9" dbms="mysql" author="Struti">
+    <sqlFile path="/liquibase/scripts/9_create_age_based_holiday_table_ch144.sql"/>
+  </changeSet>
+
+  <changeSet id="10" dbms="mysql" author="Struti">
+    <sqlFile path="/liquibase/scripts/10_create_child_based_holiday_table_ch147.sql"/>
+  </changeSet>
+
+  <changeSet id="11" dbms="mysql" author="Struti">
+    <sqlFile path="/liquibase/scripts/11_create_child_disability_based_holiday_table_ch153.sql"/>
+  </changeSet>
+
+  <changeSet id="12" dbms="mysql" author="Struti">
+    <sqlFile path="/liquibase/scripts/12_create_user_disability_based_holiday_table_ch148.sql"/>
+  </changeSet>
+  
+  <changeSet id="13" dbms="mysql" author="Struti">
+    <sqlFile path="/liquibase/scripts/13_create_dad_holiday_table_ch156.sql"/>
+  </changeSet>
+  
+  <changeSet id="14" dbms="mysql" author="Struti">
+    <sqlFile path="/liquibase/scripts/14_create_maternity_holiday_table_ch159.sql"/>
+  </changeSet>
+  
+  <changeSet id="15" dbms="mysql" author="Struti">
+    <sqlFile path="/liquibase/scripts/15_create_child_border_age_table_ch387.sql"/>
+  </changeSet>
+  
+  <changeSet id="16" dbms="mysql" author="Struti">
+    <sqlFile path="/liquibase/scripts/16_create_national_holiday_table_ch456.sql"/>
+  </changeSet>
+  
+  <!--TEST DB DETAILS-->
+  <!--<include file="testchangelog.xml" relativeToChangelogFile="true"/>-->
+</databaseChangeLog>

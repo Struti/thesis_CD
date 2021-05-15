@@ -1,0 +1,19 @@
+\Chapter{Összefoglalás}
+
+A szakdolgozatom elkészítését nagyban segítette, a Java Enterprise környezetben elsajátított szakmai tapasztalatom a webalkamázasokkal kapcsolatban. A kutatómunka, és a téma megismeréséhez szükséges előkészületek igen hasznos tudást nyújtottak a munkajog terén, valamint a komolyabb szoftvertervezéssel kapcsolatos ismereteimet is sikerült bővítenem. Az implementáció hosszas folyamata során kifejezetten sok új és hasznos szakmai ismeretanyagra tettem szert.
+
+A program jelenlegi állapotában működőképes, de a teljes funkciókövetelménynek nem sikerült eleget tenni, így bőven tartalmaz még magában fejlesztési lehetőséget.
+
+\Section{Fejlesztési lehetőségek}
+
+Mivel több követelmény nem teljesült ezért több lehetőséget is szeretnék kifejteni, de mindezek előtt a továbbfejlesztésben az architektúra újragondolását tartom a legnagyobb lehetőségnek.
+\paragraph{Architektúra} szempontjából, a microservice irányában folytatnám a program fejlesztését, melyet az adatbázis, és a megjelenítési réteg önállósításával lehet elkezdeni. így a központi logika összetettsége csökkenne, és a kódbázisok külön fejleszthetőek lennének.
+
+\paragraph{A Statisztika generálás} funkcióra külön alkalmazást építenék, amely nem az összetett szabadságolással foglalkozó webalkalmazás egy modulja, hanem egy önállóan fejleszthető és karbantartható egység.
+
+\paragraph{A szoftverbiztonság} szempontjából, a Spring által támogatott és egyetemeken is alkalmazott LDAP integráció fejlesztése. Ezzel a fejlesztéssel felhasználó szempontból megkönnyítjük a használatot, adatbázisunk csak és kizárólag a számunkra hasznos adatokat tárolná.
+
+\paragraph{Kérelem jóváhagyás} esetén a már említett Flowable könyvtár használatával komolyabb utánajárást követően lefejleszthető.
+
+A felsorolt fejlesztési lehetőségeken mellett a már specifikált, de még nem megvalósított részleteket mint például az éves terv generálása, valamint a megjelenítési réteg teljes implementálása természetesen előnyt élvez a fejlesztési sorban.
+

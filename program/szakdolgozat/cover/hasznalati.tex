@@ -1,0 +1,37 @@
+\pagestyle{empty}
+
+\noindent \textbf{\Large Adathordozó használati útmutató}
+
+\vskip 1cm
+
+Ez jellemzően csak egy fél-egy oldalas leírás.
+Arra szolgál, hogy ha valaki kézhez kapja a szakdolgozathoz tartozó CD-t, akkor tudja, hogy mi hol van rajta.
+Jellemzően elég csak felsorolni, hogy milyen jegyzékek vannak, és azokban mi található.
+Az elkészített programok telepítéséhez, futtatásához tartozó instrukciók kerülhetnek ide.
+
+A CD lemez tartalma
+\begin{itemize}
+\item a \texttt{dolgozat.pdf} fájl,
+\item a \textbf{dolgozat\_latex} mappa tartalmazza a LaTeX forráskódját a dolgozatnak,
+\item a \textbf{program} mappa tartalmazza az elkészített program forráskódját
+\end{itemize}
+
+\vskip 1cm
+
+A program futtatásához a következő előfeltételek szükségesek:
+\begin{itemize}
+	\item A futtató számítógépre telepített Docker környezet
+	\item Legalább Java 11-es verzió.
+	\item Configurált Maven
+	\item Node.js
+	\item Angular.js
+\end{itemize}
+
+Az előfeltétel teljesítése után a következő parancsokkal indítható a program.
+
+\begin{itemize}
+	\item a holiday\_registry könyvtárban állva console-ban kiadjuk az \textbf{mvn clean install} parancsot
+	\item a Frontend demo indításához a frontend mappában consoleon keresztül kiadjuk az \textbf{ng serve} parancsot (Ezután a localhost:4000 portján elérhető az oldal)
+	\item a docker könyvtárban consoleból kiadjuk a \textbf{docker-compose up} parancsot.
+	\item a Backend applikáció futásához a web könyvtárból kiandjuk az \textbf{mvn spring-boot:run} parancsot a program felülete a http://localhost:8080/swagger-ui/ linken elérhető.
+\end{itemize}

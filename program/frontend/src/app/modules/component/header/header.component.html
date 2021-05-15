@@ -1,0 +1,28 @@
+<div fxLayout=" column" class="header">
+    <div fxFlex="10%" fxLayout="row" fxLayoutAlign="center center">
+        <!-- Language selector. -->
+        <div>
+            <img class="hun-flag" src="../../../../assets/hun.png" (click)="translate.setHunLanguage()">
+            <img class="eng-flag" src="../../../../assets/eng.webp" (click)="translate.setEngLanguage()">
+        </div>
+    </div>
+    <div fxFlex="80%" fxLayout="row" fxLayoutAlign="space-between center" class="navbar navbar-expand-lg">
+        <img src="../../../../assets/me_logo.png" alt="University of Miskolc" routerLink="/">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div fxFlex="40%" fxLayoutAlign="center" class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" routerLink="/">{{ 'HEADER.MAIN_PAGE' | translate}}</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="users">{{ 'HEADER.USERS' | translate}}</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="holidays">{{ 'HEADER.HOLIDAYS' | translate}}</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="holidays-plan">{{ 'HEADER.HOLIDAYS_PLAN' | translate}}</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Logout button. -->
+    <div fxFlex="10%" fxLayout="row" fxLayoutAlign="center center">
+        <div class="btn">{{ 'HEADER.LOGOUT' | translate}}</div>
+    </div>
+</div>

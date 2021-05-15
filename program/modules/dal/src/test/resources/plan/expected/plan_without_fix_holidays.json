@@ -1,0 +1,9 @@
+{
+  "basicHolidays": {
+    "id": 11111,
+    "type": "BASIC",
+    "description": "description",
+    "day": 10
+  },
+  "fixHolidays": null
+}

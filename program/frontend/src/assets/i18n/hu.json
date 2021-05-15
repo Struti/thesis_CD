@@ -1,0 +1,17 @@
+{
+    "HEADER": {
+        "MAIN_PAGE": "Főoldal",
+        "USERS": "Felhasználók",
+        "HOLIDAYS": "Szabadságok",
+        "HOLIDAYS_PLAN": "Szabadság kalkuláció",
+        "LOGOUT": "Kijelentkezés"
+    },
+    "WELCOME": {
+        "TITTLE": "Üdvözlöm a főoldalon!",
+        "SUBTITTLE": "Szakdolgozat: Strutinszky Alex"
+    },
+    "ERROR": {
+        "TITLE" : "Úgy tűnik, eltévedtél ...",
+        "BUTTON" : "Vissza"
+    }
+}

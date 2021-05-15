@@ -1,0 +1,52 @@
+<!-- MAJD BE KELL KÖTNI KÜLÖN KOMPONENSKÉNT -->
+<div fxLayout="column">
+    <div fxLayoutAlign="center end" class="paginator">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="card" fxFlex="0 0 90%" fxLayoutAlign="center">
+      <div class="card-body">
+
+        <div class="search">
+          <input class="form-control mr-sm-2" type="search" placeholder="Kereső" aria-label="Search">
+        </div>
+
+        <table class="table table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Email</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let mockTablesDatas of mockTablesDatas; index as i">
+            <tr>
+              <td>{{mockTablesDatas.id}}</td>
+              <td>{{mockTablesDatas.first_name}}</td>
+              <td>{{mockTablesDatas.first_name}}</td>
+              <td>{{mockTablesDatas.email}}</td>
+              <td><button class="btn btn-success">Edit</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
